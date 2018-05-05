@@ -1,7 +1,6 @@
 const Controller = require('egg').Controller;
 
-module.exports = class QH_Controller extends Controller {
-  constructor(){}
+module.exports = class qhController extends Controller {
 
   async output(data,addition_arr){
     const { ctx, service } = this;

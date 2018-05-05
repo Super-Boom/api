@@ -10,6 +10,5 @@ module.exports = class QH_Model extends Service {
   }
   async fetch(ctx,next){
     console.log('fetch_ctx',ctx);
-    await next();
   }
 }

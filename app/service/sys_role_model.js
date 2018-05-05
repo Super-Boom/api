@@ -7,9 +7,9 @@ class Sys_role_model extends Service{
   }
 } */
 
-const QH_Model = require('../core/QH_Model')
+const qhModel = require('../core/qhModel')
 
-class Sys_role_model extends QH_Model{
+class Sys_role_model extends qhModel{
   constructor(){
     super();
     const db = app.mysql.get('meta');
