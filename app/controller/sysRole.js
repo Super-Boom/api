@@ -1,16 +1,14 @@
-const qhController = require('../core/qhController');
+// const qhController = require('../core/qhController');
 
 const Controller = require("egg").Controller;
-class RoleController extends qhController {
-  constructor(){
-    super()
-  }
+class RoleController extends Controller {
+  
   async fetch_role(){
-    const { ctx } = this;
-    ctx.body = 'xzg';
-    const req = ctx.request;
-
-    console.log('req',req);
+    const ctx = this.ctx;
+    const id = ctx.params.id;
+    const roleInfo = await ctx.service.sysRoleModel.fetch(id);
+    console.log('roleInfo',roleInfo);
+    ctx.body = roleInfo;
   }
 }
 module.exports = RoleController;
